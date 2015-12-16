@@ -1,3 +1,1 @@
-# wpBoilerPlate
-# boilerPlate
 # hnesPrnt
