@@ -142,9 +142,9 @@ function conure_widgets_init(){
 function custom_login_logo(){
 	echo '
 	<style type="text/css">
-	body.login { background-color: #9B9B9B !important; }
+	body.login { background-color: #fff !important; }
 	#loginform { background-color: #515151 !important; }
-	.login #nav a, .login #backtoblog a { color: #fff !important; }
+	.login #nav a, .login #backtoblog a { color: #9B9B9B !important; }
 	.wp-core-ui .button-primary { background: #000000; border-color: #000000 !important; -webkit-box-shadow: inset 0 1px 0 rgba(230, 230, 230, 0.5),0 1px 0 rgba(0,0,0,.15) !important; box-shadow: inset 0 1px 0 rgba(230,230,230,.5),0 1px 0 rgba(0,0,0,.15); color: #fff; text-decoration: none; }
 	.wp-core-ui .button-primary:hover { background-color: #2E2E2E !important; }
 	h1 a { background-size:100% !important; background-image: url('.custom_logo().') !important; }

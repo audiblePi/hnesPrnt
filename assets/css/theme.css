@@ -2284,7 +2284,7 @@ aside ul.nav-list > li > a {
 /* Home Slider - Revolution Slider */
 .slider-container {
 	background: #171717;
-	height: 500px;
+	/*height: 500px;*/
 	overflow: hidden;
 	width: 100%;
 	direction: ltr;

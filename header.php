@@ -12,19 +12,27 @@
 
 <body <?php body_class(); ?>>
 
-<header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
+<header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 70, "stickySetTop": "-70px", "stickyChangeLogo": true}'>
 	<div class="header-body">
 		<div class="header-container container">
 			<div class="header-row">
 				<div class="header-column">
 					<div class="header-logo">
 						<a href="<?php echo site_url(); ?>">
-							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="<?php echo custom_logo(); ?>">
+							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="40" src="<?php echo custom_logo(); ?>">
 						</a>
 					</div>
 				</div>
 				<div class="header-column">
 					<div class="header-row">
+						<span class="additional-header-info">
+							<div class="tagline">
+								<?php echo $up_options->tagline; ?>
+							</div>
+							<div class="phone">
+								<?php echo $up_options->phone_number; ?>
+							</div>
+						</span>
 						<nav class="header-nav-top">
 							<ul class="nav nav-pills">
 								<li class="hidden-xs">
