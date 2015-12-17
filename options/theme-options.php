@@ -12,27 +12,27 @@ $main_tab = array(
                                         ),
                       'front_page_section1' => array(
                                                   'name' => 'front_page_section1',
-                                                  'title' => __( 'Section 1' ),
+                                                  'title' => __( 'Intro Section' ),
                                                   'description' => __( 'Section Content.')
                                                   ),
                       'front_page_section2' => array(
                                                   'name' => 'front_page_section2',
-                                                  'title' => __( 'Section 2' ),
+                                                  'title' => __( 'Printing Services Section' ),
                                                   'description' => __( 'Section Content.')
                                                   ),
                       'front_page_section3' => array(
                                                   'name' => 'front_page_section3',
-                                                  'title' => __( 'Section 3' ),
+                                                  'title' => __( 'Features Section' ),
                                                   'description' => __( 'Section Content.')
                                                   ),
                       'front_page_section4' => array(
                                                   'name' => 'front_page_section4',
-                                                  'title' => __( 'Section 4' ),
+                                                  'title' => __( 'Recent Projects Section' ),
                                                   'description' => __( 'Section Content.')
                                                   ),
                       'front_page_section5' => array(
                                                   'name' => 'front_page_section5',
-                                                  'title' => __( 'Section 5' ),
+                                                  'title' => __( 'Testimonials Section' ),
                                                   'description' => __( 'Section Content.')
                                                   ),
                       'business_information' => array(
@@ -88,33 +88,7 @@ $mainoptions = array(
 
 
 
-  "section1_title" => array(
-                            "tab" => "main_options",
-                            "name" => "section1_title",
-                            "title" => "Title",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section1",
-                            "id" => "section1_title",
-                            "type" => "text"
-                            ),
-  "section1_subtitle" => array(
-                            "tab" => "main_options",
-                            "name" => "section1_subtitle",
-                            "title" => "Subtitle",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section1",
-                            "id" => "section1_subtitle",
-                            "type" => "text"
-                            ),
-  "section1_image" => array(
-                            "tab" => "main_options",
-                            "name" => "section1_image",
-                            "title" => "Image",
-                            "description" => __( "Select an image." ),
-                            "section" => "front_page_section1",
-                            "id" => "section1_image",
-                            "type" => "image"
-                            ),
+  
   "section1_content" => array(
                             "tab" => "main_options",
                             "name" => "section1_content",
@@ -123,15 +97,6 @@ $mainoptions = array(
                             "section" => "front_page_section1",
                             "id" => "section1_content",
                             "type" => "textarea"
-                            ),
-  "section1_pdf" => array(
-                            "tab" => "main_options",
-                            "name" => "section1_pdf",
-                            "title" => "PDF",
-                            "description" => __( "Enter the pdf link." ),
-                            "section" => "front_page_section1",
-                            "id" => "section1_pdf",
-                            "type" => "text"
                             ),
 
 
@@ -148,26 +113,9 @@ $mainoptions = array(
                             "description" => __( "Enter text." ),
                             "section" => "front_page_section2",
                             "id" => "section2_title",
-                            "type" => "text"
-                            ),
-  "section2_subtitle" => array(
-                            "tab" => "main_options",
-                            "name" => "section2_subtitle",
-                            "title" => "Subtitle",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section2",
-                            "id" => "section2_subtitle",
-                            "type" => "text"
-                            ),
-  "section2_content" => array(
-                            "tab" => "main_options",
-                            "name" => "section2_content",
-                            "title" => "Content",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section2",
-                            "id" => "section2_content",
                             "type" => "textarea"
                             ),
+
 
 
 
@@ -183,26 +131,9 @@ $mainoptions = array(
                             "description" => __( "Enter text." ),
                             "section" => "front_page_section3",
                             "id" => "section3_title",
-                            "type" => "text"
-                            ),
-  "section3_subtitle" => array(
-                            "tab" => "main_options",
-                            "name" => "section3_subtitle",
-                            "title" => "Sub title",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section3",
-                            "id" => "section3_subtitle",
-                            "type" => "text"
-                            ),
-  "section3_content" => array(
-                            "tab" => "main_options",
-                            "name" => "section3_content",
-                            "title" => "Content",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section3",
-                            "id" => "section3_content",
                             "type" => "textarea"
                             ),
+
 
 
 
@@ -218,35 +149,9 @@ $mainoptions = array(
                             "description" => __( "Enter text." ),
                             "section" => "front_page_section4",
                             "id" => "section4_title",
-                            "type" => "text"
-                            ),
-  "section4_subtitle" => array(
-                            "tab" => "main_options",
-                            "name" => "section4_subtitle",
-                            "title" => "Subtitle",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section4",
-                            "id" => "section4_subtitle",
-                            "type" => "text"
-                            ),
-  "section4_content" => array(
-                            "tab" => "main_options",
-                            "name" => "section4_content",
-                            "title" => "Content",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section4",
-                            "id" => "section4_content",
                             "type" => "textarea"
                             ),
-  "section4_image" => array(
-                            "tab" => "main_options",
-                            "name" => "section4_image",
-                            "title" => "Parallax Image",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section4",
-                            "id" => "section4_image",
-                            "type" => "image"
-                            ),
+  
 
 
 
@@ -265,24 +170,6 @@ $mainoptions = array(
                             "description" => __( "Enter text." ),
                             "section" => "front_page_section5",
                             "id" => "section5_title",
-                            "type" => "text"
-                            ),
-  "section5_subtitle" => array(
-                            "tab" => "main_options",
-                            "name" => "section5_subtitle",
-                            "title" => "Subtitle",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section5",
-                            "id" => "section5_subtitle",
-                            "type" => "text"
-                            ),
-  "section5_content" => array(
-                            "tab" => "main_options",
-                            "name" => "section5_content",
-                            "title" => "Content",
-                            "description" => __( "Enter text." ),
-                            "section" => "front_page_section5",
-                            "id" => "section5_content",
                             "type" => "textarea"
                             ),
 
