@@ -30,7 +30,9 @@ function conure_setup()
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	register_nav_menus( array(
-	    	'main-menu' => __( 'Main Menu', 'conure' ) 
+	    	'main-menu' => __( 'Main Menu', 'conure' ), 
+	    	'header-menu' => __( 'Header Menu', 'conure' ),
+	    	'footer-menu' => __( 'Footer Menu', 'conure' ),
 	    )
 	);
 	add_filter( 'wp_title', 'conure_filter_wp_title' );

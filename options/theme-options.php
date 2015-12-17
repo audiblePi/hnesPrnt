@@ -330,6 +330,15 @@ $mainoptions = array(
                    "id" => "googleplus",
                    "type" => "text"
                    ),
+  "contact_email" => array(
+                   "tab" => "main_options",
+                   "name" => "contact_email",
+                   "title" => "Contact Email",
+                   "description" => __( "Enter the company contact email" ),
+                   "section" => "business_information",
+                   "id" => "contact_email",
+                   "type" => "text"
+                   ),
   "office_location" => array(
                             "tab" => "main_options",
                             "name" => "office_location",

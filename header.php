@@ -6,28 +6,68 @@
 	<meta http-equiv="x-ua-compatible" content="IE=edge" >
 	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
-	<?php wp_head(); ?>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">	<?php wp_head(); ?>
   	<?php global $up_options; ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-<header>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 logo" >
-				<a href="<?php echo site_url() ?>">
-					<img src="<?php echo custom_logo(); ?>" alt="Image">
-				</a>
-			</div>
-			<div class="col-md-6">
-				<div>
-					<span><?php if ($up_options->phone_number != ''): echo $up_options->phone_number; endif; ?></span>
+<header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
+	<div class="header-body">
+		<div class="header-container container">
+			<div class="header-row">
+				<div class="header-column">
+					<div class="header-logo">
+						<a href="<?php echo site_url(); ?>">
+							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="<?php echo custom_logo(); ?>">
+						</a>
+					</div>
 				</div>
-				<div>	
-					<?php get_social_icons(); ?>
+				<div class="header-column">
+					<div class="header-row">
+						<nav class="header-nav-top">
+							<ul class="nav nav-pills">
+								<li class="hidden-xs">
+									<a href="/about-hines-printing"><i class="fa fa-angle-right"></i>About Hines Printing</a>
+								</li>
+								<li class="hidden-xs">
+									<a href="/contact-us"><i class="fa fa-angle-right"></i>Contact Us</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-row">
+						<div class="header-nav">
+							<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+								<i class="fa fa-bars"></i>
+							</button>
+							<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+								<nav>
+									<ul class="nav nav-pills" id="mainNav">
+										<li class="active"><a href="">Home</a></li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="/printing-services">Printing Services</a>
+											<ul class="dropdown-menu">
+												<li><a href="/business-cards">Business Cards</a></li>
+												<li><a href="/stationery">Stationery</a></li>
+												<li><a href="/posters-and-banners">Posters and Banners</a></li>
+												<li><a href="/business-forms">Business Forms</a></li>
+												<li><a href="/post-cards">Post Cards</a></li>
+												<li><a href="/folders-and-envelopes">Folders and Envelopes</a></li>
+												<li><a href="/catalogues-and-booklets">Catalogues and Booklets</a></li>
+												<li><a href="/brochures-and-flyers">Brochures and Flyers</a></li>
+											</ul>
+										</li>
+										<li><a href="/embroidery">EMBROIDERY</a></li>
+										<li><a href="/custom-shirts">CUSTOM SHIRTS</a></li>
+										<li><a href="/copy-services">COPY SERVICES</a></li>
+										<li><a href="/school-uniforms">SCHOOL UNIFORMS</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
 				</div>
-				<?php wp_nav_menu( array( 'theme_location' => 'main-menu') ); ?>
 			</div>
 		</div>
 	</div>
