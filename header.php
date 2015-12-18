@@ -69,7 +69,13 @@
 										<li><a href="/embroidery">EMBROIDERY</a></li>
 										<li><a href="/custom-shirts">CUSTOM SHIRTS</a></li>
 										<li><a href="/copy-services">COPY SERVICES</a></li>
-										<li><a href="/school-uniforms">SCHOOL UNIFORMS</a></li>
+										<li class="dropdown">
+											<a href="/">SHOP</a>
+											<ul class="dropdown-menu">
+												<li><a href="/product-category/school-uniforms">School Uniforms</a></li>
+												<li><a href="/product-category/apparel">Apparel</a></li>
+											</ul>
+										</li>
 									</ul>
 								</nav>
 							</div>

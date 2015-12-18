@@ -69,36 +69,36 @@ function conure_widgets_init(){
 	                 'name' => __( 'Sidebar 1', 'conure' ),
 	                 'id' => 'primary-widget-area-1',
 	                 'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-	                 'after_widget' => '</div>',
-	                 'before_title' => '<h3 class="widget-title">',
-	                 'after_title' => '</h3>',
+	                 'after_widget' => '<hr></div>',
+	                 'before_title' => '<h4 class="widget-title">',
+	                 'after_title' => '</h4>',
 	                 ) );
 
 	register_sidebar( array (
 	                 'name' => __( 'Sidebar 2', 'conure' ),
 	                 'id' => 'primary-widget-area-2',
 	                 'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-	                 'after_widget' => '</div>',
-	                 'before_title' => '<h3 class="widget-title">',
-	                 'after_title' => '</h3>',
+	                 'after_widget' => '<hr></div>',
+	                 'before_title' => '<h4 class="widget-title">',
+	                 'after_title' => '</h4>',
 	                 ) );
 
 	register_sidebar( array (
 	                 'name' => __( 'Sidebar 3', 'conure' ),
 	                 'id' => 'primary-widget-area-3',
 	                 'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-	                 'after_widget' => '</div>',
-	                 'before_title' => '<h3 class="widget-title">',
-	                 'after_title' => '</h3>',
+	                 'after_widget' => '<hr></div>',
+	                 'before_title' => '<h4 class="widget-title">',
+	                 'after_title' => '</h4>',
 	                 ) );
 
 	register_sidebar( array (
 	                 'name' => __( 'Sidebar 4', 'conure' ),
 	                 'id' => 'primary-widget-area-4',
 	                 'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-	                 'after_widget' => '</div>',
-	                 'before_title' => '<h3 class="widget-title">',
-	                 'after_title' => '</h3>',
+	                 'after_widget' => '<hr></div>',
+	                 'before_title' => '<h4 class="widget-title">',
+	                 'after_title' => '</h4>',
 	                 ) );
 
 

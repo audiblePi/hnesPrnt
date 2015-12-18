@@ -1,18 +1,31 @@
 <?php get_header(); ?>
-<section id="content-wrapper" role="main">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<div role="main" class="main">
+	<section class="page-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li class="active"><?php the_title(); ?></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h1><?php the_title(); ?></h1>
+				</div>
+			</div>
+		</div>
+	</section>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<h1><?php the_title(); ?></h1>
-						<section class="entry-content">
-							<?php the_content(); ?>
-						</section>
-					</div>
-				<?php endwhile; endif; ?>
+				<h2><?php the_title(); ?></h2>
+				<?php the_content(); ?>
 			</div>
-			<div class="col-md-4"> 
+
+			<div class="col-md-4">
 				<div class="sidebar">
 					<?php
 						$sidebarOption = get_field('sidebar_option');
@@ -28,5 +41,6 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
+<?php endwhile; endif; ?>
 <?php get_footer(); ?>
