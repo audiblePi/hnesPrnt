@@ -33,6 +33,6 @@ switch( $template ) {
 		echo '<div id="primary" class="content-area twentysixteen"><main id="main" class="site-main" role="main">';
 		break;
 	default :
-		echo '<div class="container"><div id="content" class="main shop" role="main">';
+		echo '<div class=""><div id="content" class="main shop" role="main">';
 		break;
 }

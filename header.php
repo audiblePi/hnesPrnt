@@ -73,7 +73,7 @@
 											<a href="/">SHOP</a>
 											<ul class="dropdown-menu">
 												<li><a href="/product-category/school-uniforms">School Uniforms</a></li>
-												<li><a href="/product-category/apparel">Apparel</a></li>
+												<li><a href="/shop/apparel">Apparel</a></li>
 											</ul>
 										</li>
 									</ul>
