@@ -97,15 +97,19 @@
 										    		echo "<ul class='dropdown-menu'>";
 										    	endif;
 										    	echo "<li><a href='".$url."'>".$title."</a></li>";
-										    	if ( $items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu):
-										    		echo "</ul>";
-										    		$submenu = false;
-										    	endif;
+										    	if ($count < count($items) - 1){
+											    	if ( $items[ $count + 1 ] && $items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu):
+											    		echo "</ul>";
+											    		$submenu = false;
+											    	endif;
+											    }
 										    endif;
-										    if ( $items[ $count + 1 ]->menu_item_parent != $parent_id ):
-										    	echo "</li>";
-										    	$submenu = false; 
-										    endif;
+										    if ($count < count($items) - 1){
+											    if ( $items[ $count + 1 ] && $items[ $count + 1 ]->menu_item_parent != $parent_id ):
+											    	echo "</li>";
+											    	$submenu = false; 
+											    endif;
+											}
 										$count++; 
 										endforeach;
 										echo "</ul>";
