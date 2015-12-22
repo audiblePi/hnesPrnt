@@ -34,14 +34,28 @@
 							</div>
 						</span>
 						<nav class="header-nav-top">
-							<ul class="nav nav-pills">
-								<li class="hidden-xs">
-									<a href="/about-hines-printing"><i class="fa fa-angle-right"></i>About Hines Printing</a>
-								</li>
-								<li class="hidden-xs">
-									<a href="/contact-us"><i class="fa fa-angle-right"></i>Contact Us</a>
-								</li>
-							</ul>
+							<?php 
+							$header_menu = 'header-menu';
+							$args = array(
+						        'order'                  => 'ASC',
+						        'orderby'                => 'menu_order',
+						        'post_type'              => 'nav_menu_item',
+						        'post_status'            => 'publish',
+						        'output'                 => ARRAY_A,
+						        'output_key'             => 'menu_order',
+						        'nopaging'               => true,
+						        'update_post_term_cache' => false );
+							if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $header_menu ] ) ) {
+								echo "<ul class='nav nav-pills'>";
+								$items = wp_get_nav_menu_items( $header_menu, $args ); 
+								foreach ( (array) $items as $key => $item ) {
+								    $title = $item->title;
+								    $url = $item->url;
+								    echo "<li class='hidden-xs'><a href='".$url."'><i class='fa fa-angle-right'></i>".$title."</a></li>";
+								}
+								echo "</ul>";
+							}
+							?> 
 						</nav>
 					</div>
 					<div class="header-row">
@@ -51,32 +65,52 @@
 							</button>
 							<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
 								<nav>
-									<ul class="nav nav-pills" id="mainNav">
-										<li class="active"><a href="">Home</a></li>
-										<li class="dropdown">
-											<a class="dropdown-toggle" href="/printing-services">Printing Services</a>
-											<ul class="dropdown-menu">
-												<li><a href="/business-cards">Business Cards</a></li>
-												<li><a href="/stationery">Stationery</a></li>
-												<li><a href="/posters-and-banners">Posters and Banners</a></li>
-												<li><a href="/business-forms">Business Forms</a></li>
-												<li><a href="/post-cards">Post Cards</a></li>
-												<li><a href="/folders-and-envelopes">Folders and Envelopes</a></li>
-												<li><a href="/catalogues-and-booklets">Catalogues and Booklets</a></li>
-												<li><a href="/brochures-and-flyers">Brochures and Flyers</a></li>
-											</ul>
-										</li>
-										<li><a href="/embroidery">EMBROIDERY</a></li>
-										<li><a href="/custom-shirts">CUSTOM SHIRTS</a></li>
-										<li><a href="/copy-services">COPY SERVICES</a></li>
-										<li class="dropdown">
-											<a href="/">SHOP</a>
-											<ul class="dropdown-menu">
-												<li><a href="/product-category/school-uniforms">School Uniforms</a></li>
-												<li><a href="/shop/apparel">Apparel</a></li>
-											</ul>
-										</li>
-									</ul>
+									<?php 
+									$main_menu = 'main-menu';
+									$count = 0;
+									$submenu = false;
+									$args2 = array(
+								        'order'                  => 'ASC',
+								        'orderby'                => 'menu_order',
+								        'post_type'              => 'nav_menu_item',
+								        'post_status'            => 'publish',
+								        'output'                 => ARRAY_A,
+								        'output_key'             => 'menu_order',
+								        'nopaging'               => true,
+								        'update_post_term_cache' => false );
+									if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $main_menu ] ) ) {
+										echo "<ul class='nav nav-pills' id='mainNav'>";
+										$items = wp_get_nav_menu_items( $main_menu, $args2 ); 
+										foreach ( (array) $items as $key => $item ) :
+										    $title = $item->title;
+										    $url = $item->url;
+										    if ( !$item->menu_item_parent ):
+										    	$parent_id = $item->ID;
+										    	if ( $items[ $count + 1 ]->menu_item_parent > 0)
+										    		echo "<li class='dropdown'><a href='".$url."'>".$title."</a>";
+										    	else
+										    		echo "<li><a href='".$url."'>".$title."</a>";
+										    endif;
+										    if ( $parent_id == $item->menu_item_parent ):
+										    	if ( !$submenu ): 
+										    		$submenu = true;
+										    		echo "<ul class='dropdown-menu'>";
+										    	endif;
+										    	echo "<li><a href='".$url."'>".$title."</a></li>";
+										    	if ( $items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu):
+										    		echo "</ul>";
+										    		$submenu = false;
+										    	endif;
+										    endif;
+										    if ( $items[ $count + 1 ]->menu_item_parent != $parent_id ):
+										    	echo "</li>";
+										    	$submenu = false; 
+										    endif;
+										$count++; 
+										endforeach;
+										echo "</ul>";
+									}
+									?> 
 								</nav>
 							</div>
 						</div>

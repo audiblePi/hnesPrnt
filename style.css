@@ -25,9 +25,10 @@ p{color:#000;line-height:1.375;margin-bottom:20px}
 header .logo img {width:100px;}
 header ul li {/*display:inline-block;*//*padding: 0px 10px 0px 0px;*/}
 header#header .header-nav-top {margin-top: 25px;}
-header .additional-header-info {float:right;text-align: right;padding-right: 25px;padding-bottom:5px;}
+header .additional-header-info {float:right;text-align: right;padding: 0px 25px 5px 5px;}
 header .additional-header-info .tagline{font-size: 1.1em;margin-bottom:5px;}
 header .additional-header-info .phone{color:#000;font-size: 1.5em;font-weight: bold;}
+
 
 /*Front Page*/
 
