@@ -86,9 +86,9 @@
 										    $url = $item->url;
 										    if ( !$item->menu_item_parent ):
 										    	$parent_id = $item->ID;
-										    	if ( $items[ $count + 1 ]->menu_item_parent > 0)
-										    		echo "<li class='dropdown'><a href='".$url."'>".$title."</a>";
-										    	else
+											    if ( ($count < count($items) - 1) && $items[ $count + 1 ] && $items[ $count + 1 ]->menu_item_parent > 0)
+											    		echo "<li class='dropdown'><a href='".$url."'>".$title."</a>";											 
+											   	else
 										    		echo "<li><a href='".$url."'>".$title."</a>";
 										    endif;
 										    if ( $parent_id == $item->menu_item_parent ):
@@ -97,19 +97,15 @@
 										    		echo "<ul class='dropdown-menu'>";
 										    	endif;
 										    	echo "<li><a href='".$url."'>".$title."</a></li>";
-										    	if ($count < count($items) - 1){
-											    	if ( $items[ $count + 1 ] && $items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu):
-											    		echo "</ul>";
-											    		$submenu = false;
-											    	endif;
-											    }
+										    	if ( ($count < count($items) - 1) && $items[ $count + 1 ] && $items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu):
+										    		echo "</ul>";
+										    		$submenu = false;
+										    	endif;
 										    endif;
-										    if ($count < count($items) - 1){
-											    if ( $items[ $count + 1 ] && $items[ $count + 1 ]->menu_item_parent != $parent_id ):
-											    	echo "</li>";
-											    	$submenu = false; 
-											    endif;
-											}
+										    if ( ($count < count($items) - 1) && $items[ $count + 1 ] && $items[ $count + 1 ]->menu_item_parent != $parent_id ):
+										    	echo "</li>";
+										    	$submenu = false; 
+										    endif;
 										$count++; 
 										endforeach;
 										echo "</ul>";

@@ -45,10 +45,10 @@
 	<div class="footer-copyright">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-6">
 					<p>© Copyright 2015. All Rights Reserved.</p>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<nav id="sub-menu">
 						<?php wp_nav_menu( array( 'theme_location' => 'footer-menu') ); ?>
 					</nav>
