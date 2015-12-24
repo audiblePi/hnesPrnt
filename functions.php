@@ -162,3 +162,79 @@ function admin_scripts_styles(){
 	wp_enqueue_script( 'custom_wp_admin_js' );
 
 }
+
+
+
+
+//Custom Search Widget
+class custom_search_widget extends WP_Widget {
+	function __construct() {
+		parent::__construct(
+			'custom_search_widget',
+			__('Custom Search Widget', 'conure'),
+			array( 'description' => __( 'Customized search widget', 'conure' ), )
+			);
+	}
+
+	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		?>
+		<form method="get" id="searchform" action="<?php echo home_url() ; ?>/">
+			<div class="input-group input-group-lg">
+				<input class="form-control" type="text" placeholder="Search..."  name="s" id="s" maxlength="33" />
+				<span class="input-group-btn">
+					<button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-search"></i></button>
+				</span>
+			</div>
+		</form>
+		<?php
+		echo $args['after_widget'];
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		return $instance;
+	}
+}
+function wpb_load_custom_search_widget() {
+	register_widget( 'custom_search_widget' );
+}
+add_action( 'widgets_init', 'wpb_load_custom_search_widget' );
+
+
+
+
+
+//The Office Widget
+class the_office_widget extends WP_Widget {
+	function __construct() {
+		parent::__construct(
+			'the_office_widget',
+			__('The Office Widget', 'conure'),
+			array( 'description' => __( 'Customized office widget from theme options content', 'conure' ), )
+			);
+	}
+
+	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		global $up_options;
+		?>
+		<h4 class="widget-title">The Office</h4>
+		<ul class="list list-icons list-icons-style-3 mt-xlg">
+			<li><i class="fa fa-map-marker"></i> <strong>Address: </strong><?php echo $up_options->office_location ?></li>
+			<li><i class="fa fa-phone"></i> <strong>Phone: </strong><?php echo $up_options->phone_number ?></li>
+			<li><i class="fa fa-envelope"></i> <strong>Email: </strong><a href="mailto:<?php echo $up_options->contact_email ?>"><?php echo $up_options->contact_email ?></a></li>
+		</ul>
+		<?php
+		echo $args['after_widget'];
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		return $instance;
+	}
+}
+function wpb_load_the_office_widget() {
+	register_widget( 'the_office_widget' );
+}
+add_action( 'widgets_init', 'wpb_load_the_office_widget' );

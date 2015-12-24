@@ -1,15 +1,25 @@
 <?php get_header(); ?>
 <section id="content-wrapper" role="main">
+	<section class="page-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li class="active">Search</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Search Results for: &quot;<?php echo get_search_query(); ?>&quot;</h1>
+				</div>
+			</div>
+		</div>
+	</section>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<div>
-					<h1>Search Results for:</h1>
-					<h2>&quot;<?php echo get_search_query(); ?>&quot;</h2>
-				</div>
-				<div>
-					<?php get_search_form( ); ?>
-				</div>
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'entry' ); ?>
@@ -22,7 +32,6 @@
 						</header>
 						<section class="entry-content">
 							<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'conure' ); ?></p>
-							<?php get_search_form(); ?>
 						</section>
 					</article>
 				<?php endif; ?>
@@ -54,5 +63,4 @@
 		</div>
 	</div>
 </section>
-<?php get_footer(); ?>
 <?php get_footer(); ?>
