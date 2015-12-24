@@ -33,6 +33,7 @@ header .additional-header-info .phone{color:#000;font-size: 1.5em;font-weight: b
 
 /*Pages*/
 .sidebar .widget-title {color: #0088cc}
+.page-not-found {text-align:center;}
 
 /*Woocommerce Pages*/
 .woocommerce ul.products li.product a img {margin:0px !important;}
@@ -62,7 +63,6 @@ body .shop .woocommerce-message a.button {color: #ffffff; text-shadow: 0 -1px 0 
 .woocommerce-page form .form-row select{display: block; width: 100%; height: 34px; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); box-shadow: inset 0 1px 1px rgba(0,0,0,.075); -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
 .woocommerce-checkout-review-order-table {border:none !important;}
 .woocommerce-checkout #payment {background: #f5f5f5!important;}
-
 .main .woocommerce #respond input#submit.alt, 
 .main .woocommerce a.button.alt, 
 .main .woocommerce button.button.alt, 
@@ -80,8 +80,6 @@ body .shop .woocommerce-message a.button {color: #ffffff; text-shadow: 0 -1px 0 
 .main .woocommerce a.button:hover, 
 .main .woocommerce button.button:hover, 
 .main .woocommerce input.button:hover{border-color: #0099e6 #0099e6 #0077b3;background-color: #0099e6;color: #ffffff;}
-
-
 
 /*Contact Page*/
 .google-container {margin: -35px 0 30px 0;}

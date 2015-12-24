@@ -19,7 +19,7 @@
 	</section>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-8">
 				<section class="page-not-found">
 					<div class="page-not-found-main">
 						<h2>404 <i class="fa fa-file"></i></h2>
@@ -27,7 +27,7 @@
 					</div>
 				</section>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<div class="sidebar">
 					<?php
 						$sidebarOption = get_field('sidebar_option');
