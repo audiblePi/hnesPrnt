@@ -147,7 +147,7 @@ function custom_login_logo(){
 	.login #nav a, .login #backtoblog a { color: #9B9B9B !important; }
 	.wp-core-ui .button-primary { background: #000000; border-color: #000000 !important; -webkit-box-shadow: inset 0 1px 0 rgba(230, 230, 230, 0.5),0 1px 0 rgba(0,0,0,.15) !important; box-shadow: inset 0 1px 0 rgba(230,230,230,.5),0 1px 0 rgba(0,0,0,.15); color: #fff; text-decoration: none; }
 	.wp-core-ui .button-primary:hover { background-color: #2E2E2E !important; }
-	h1 a { background-size:100% !important; background-image: url('.custom_logo().') !important; }
+	h1 a { background-size:100% !important; background-image: url('.custom_logo().') !important; height: 110px !important; width: 220px !important;}
 	.login form { background-color: #333333 !important; }
 	#login form p, .login label { color: #fff; }
 	.login .message { border-left: 4px solid #C62602; }

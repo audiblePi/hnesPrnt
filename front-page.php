@@ -47,7 +47,7 @@
 					<div class="col-sm-6">
 						<?php 
                         $args = array('post_type' =>'page', 'post_parent' => '6', 'orderby' => '', 'order'=> '', 'posts_per_page'=> '8'); //test site
-                        //$args = array('post_type' =>'page', 'post_parent' => '6', 'orderby' => '', 'order'=> '', 'posts_per_page'=> '8'); //production site
+                        //$args = array('post_type' =>'page', 'post_parent' => '20', 'orderby' => '', 'order'=> '', 'posts_per_page'=> '8'); //production site
                         $query = new WP_Query($args);
                         $count = 0;
 				     	if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post();
